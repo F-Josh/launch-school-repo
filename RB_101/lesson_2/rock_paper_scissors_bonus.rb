@@ -154,6 +154,23 @@ def play_again?(score_tracker)
   end
 end
 
+def play_game(choices_prompt)
+  player_choice = ' '
+  computer_choice = ' '
+  response = []
+  loop do
+    player_choice = get_player_choice(choices_prompt)
+    computer_choice = get_computer_choice()
+    prompt("Player chose: #{player_choice}")
+    prompt("Computer chose: #{computer_choice}")
+    puts ' '
+    break if player_choice != computer_choice
+    prompt("Seems we have a tie here, please make choice again:")
+    puts ' '
+  end
+  response.push(player_choice, computer_choice)
+end
+
 # Welcome message
 prompt("Welcome to rock, paper, scissors, lizard, spock game!")
 
@@ -163,29 +180,14 @@ loop do
   # The until loop determines when the game should end
   until score_record.value?(3)
     # Variable for player & computer choices & scores,
-    # Why here? - think variable scope
-    player_choice = ' '
-    computer_choice = ' '
-
-    # This loop checks for ties between player and computer, we don't want ties
-    loop do
-      player_choice = get_player_choice(choices_prompt)
-      computer_choice = get_computer_choice()
-      prompt("Player chose: #{player_choice}")
-      prompt("Computer chose: #{computer_choice}")
-      puts ' '
-      break if player_choice != computer_choice
-      prompt("Seems we have a tie here, please make choice again:")
-      puts ' '
-    end
-    # invoke the decide winne method
+    # The play game method returns an array with player & computer choices
+    player_choice, computer_choice = play_game(choices_prompt)
+    # invoke the decide winner method to get and display round winner
     decide_winner(player_choice, computer_choice, score_record, round)
     round += 1
   end
-
   # It's time to display champion!!!
   display_champion('player', 'computer', score_record)
-  _round = 0 # reset round
   break unless play_again?(score_record)
 end
 prompt("Thank you for playing!!! bye")
