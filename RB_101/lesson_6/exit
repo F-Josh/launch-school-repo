@@ -1,0 +1,40 @@
+[1m[1;34mEnumerable#methods[0m[0m: 
+  chain           each_with_index   grep_v     partition   
+  chunk           each_with_object  group_by   reduce      
+  chunk_while     entries           inject     slice_after 
+  collect_concat  filter_map        lazy       slice_before
+  detect          find              max_by     slice_when  
+  each_cons       find_all          member?    sort_by     
+  each_entry      flat_map          min_by     tally       
+  each_slice      grep              minmax_by  to_set      
+[1m[1;34mArray#methods[0m[0m: 
+  &              delete_if     map!                  select!   
+  *              difference    max                   shelljoin 
+  +              dig           min                   shift     
+  -              drop          minmax                shuffle   
+  <<             drop_while    none?                 shuffle!  
+  <=>            each          one?                  size      
+  ==             each_index    pack                  slice     
+  []             empty?        permutation           slice!    
+  []=            eql?          pop                   sort      
+  all?           fetch         prepend               sort!     
+  any?           fill          pretty_print          sort_by!  
+  append         filter        pretty_print_cycle    sum       
+  assoc          filter!       product               take      
+  at             find_index    push                  take_while
+  bsearch        first         rassoc                to_a      
+  bsearch_index  flatten       reject                to_ary    
+  clear          flatten!      reject!               to_h      
+  collect        hash          repeated_combination  to_s      
+  collect!       include?      repeated_permutation  transpose 
+  combination    index         replace               union     
+  compact        insert        reverse               uniq      
+  compact!       inspect       reverse!              uniq!     
+  concat         intersection  reverse_each          unshift   
+  count          join          rindex                values_at 
+  cycle          keep_if       rotate                zip       
+  deconstruct    last          rotate!               |         
+  delete         length        sample              
+  delete_at      map           select              
+[1m[1;34mself.methods[0m[0m: __pry__
+[1m[1;34mlocals[0m[0m: _  __  _dir_  _ex_  _file_  _in_  _out_  pry_instance

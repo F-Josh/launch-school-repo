@@ -1,0 +1,28 @@
+
+[1mFrom:[0m /home/passwd/LS_Prep_Course/RB_101/revision/tictac.rb:94 Object#detect_winner:
+
+     [1;34m92[0m: [32mdef[0m [1;34mdetect_winner[0m(brd, score_tracker)
+     [1;34m93[0m:   [1;34;4mWINNING_LINES[0m.each [32mdo[0m |line|
+ =>  [1;34m94[0m:     binding.pry
+     [1;34m95[0m:     [1;34m# if brd[line[0]] == PLAYER_MARKER &&[0m
+     [1;34m96[0m:     [1;34m#    brd[line[1]] == PLAYER_MARKER &&[0m
+     [1;34m97[0m:     [1;34m#    brd[line[2]] == PLAYER_MARKER[0m
+     [1;34m98[0m:     [1;34m#  return "Player"[0m
+     [1;34m99[0m:     [1;34m# elsif brd[line[0]] == COMPUTER_MARKER &&[0m
+    [1;34m100[0m:     [1;34m#       brd[line[1]] == COMPUTER_MARKER &&[0m
+    [1;34m101[0m:     [1;34m#       brd[line[2]] == COMPUTER_MARKER[0m
+    [1;34m102[0m:     [1;34m#  return 'Computer'[0m
+    [1;34m103[0m:     [1;34m# end[0m
+    [1;34m104[0m: 
+    [1;34m105[0m:     [32mif[0m brd.values_at(*line).count([1;34;4mPLAYER_MARKER[0m) == [1;34m3[0m
+    [1;34m106[0m:       increment([31m[1;31m"[0m[31mplayer[1;31m"[0m[31m[0m, score_tracker)
+    [1;34m107[0m:       [1;34m#binding.pry[0m
+    [1;34m108[0m:       [32mreturn[0m [31m[1;31m'[0m[31mPlayer[1;31m'[0m[31m[0m
+    [1;34m109[0m:     [32melsif[0m brd.values_at(*line).count([1;34;4mCOMPUTER_MARKER[0m) == [1;34m3[0m
+    [1;34m110[0m:       increment([31m[1;31m'[0m[31mcomputer[1;31m'[0m[31m[0m, score_tracker)
+    [1;34m111[0m:       [32mreturn[0m [31m[1;31m'[0m[31mComputer[1;31m'[0m[31m[0m
+    [1;34m112[0m:     [32mend[0m
+    [1;34m113[0m:   [32mend[0m
+    [1;34m114[0m:   [1;36mnil[0m
+    [1;34m115[0m: [32mend[0m
+
